@@ -1,0 +1,44 @@
+html * {
+    font-family: "Lucida Grande", serif;
+}
+
+body {
+    background: #f5f5f5 url("../img/background.png");
+}
+
+#mainBox {
+    padding: 10px;
+    width: 80%;
+    height: 80%;
+    position: relative;
+    left: 28%;
+    top: 20%;
+}
+
+#nameBox {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#titleBox {
+    position: relative;
+    top: 1px;
+    font-size: 1em;
+    color: #bbb;
+}
+
+#profilesBox {
+    margin-top: 1%;
+    position: relative;
+    top: 2%;
+}
+
+#profilesBox a {
+    text-decoration: none;
+    color: #36AEFF;
+}
+
+#profilesBox a:hover {
+    text-decoration: none;
+    color: #78C9FF;
+}
