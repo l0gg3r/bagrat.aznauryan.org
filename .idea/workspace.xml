@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a56da59b-1b85-4880-88e3-de46faf4ee75" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/blog-g.png" afterPath="$PROJECT_DIR$/static/img/blog-g.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/blog.png" afterPath="$PROJECT_DIR$/static/img/blog.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/github-g.png" afterPath="$PROJECT_DIR$/static/img/github-g.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/github.png" afterPath="$PROJECT_DIR$/static/img/github.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/linkedin-g.png" afterPath="$PROJECT_DIR$/static/img/linkedin-g.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/linkedin.png" afterPath="$PROJECT_DIR$/static/img/linkedin.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/stackoverflow-g.png" afterPath="$PROJECT_DIR$/static/img/stackoverflow-g.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/stackoverflow.png" afterPath="$PROJECT_DIR$/static/img/stackoverflow.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/twitter-g.png" afterPath="$PROJECT_DIR$/static/img/twitter-g.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/twitter.png" afterPath="$PROJECT_DIR$/static/img/twitter.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/social.css" afterPath="$PROJECT_DIR$/static/css/social.css" />
     </list>
     <ignored path="bagrat.aznauryan.org.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +36,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.456">
-              <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.36">
+              <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -267,14 +275,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/social.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -283,10 +283,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.456">
-          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.36">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
           <folding />
         </state>
       </provider>
