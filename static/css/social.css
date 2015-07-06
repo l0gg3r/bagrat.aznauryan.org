@@ -50,3 +50,12 @@
 .blogButton:hover {
     background-image: url("../img/blog.png");
 }
+
+.cvButton {
+    background: transparent url('../img/cv-g.png') center top no-repeat;
+    background-size: contain;
+}
+
+.cvButton:hover {
+    background-image: url("../img/cv.png");
+}
