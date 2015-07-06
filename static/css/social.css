@@ -41,3 +41,12 @@
 .githubButton:hover {
     background-image: url("../img/github.png");
 }
+
+.blogButton {
+    background: transparent url('../img/blog-g.png') center top no-repeat;
+    background-size: contain;
+}
+
+.blogButton:hover {
+    background-image: url("../img/blog.png");
+}
