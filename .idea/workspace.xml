@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a56da59b-1b85-4880-88e3-de46faf4ee75" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/download.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/blog-g.png" afterPath="$PROJECT_DIR$/static/img/blog-g.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/blog.png" afterPath="$PROJECT_DIR$/static/img/blog.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/cv-g.png" afterPath="$PROJECT_DIR$/static/img/cv-g.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/cv.png" afterPath="$PROJECT_DIR$/static/img/cv.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cv/resume_BagratAznauryan.pdf" afterPath="$PROJECT_DIR$/cv/resume_BagratAznauryan.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/stackoverflow-g.png" afterPath="$PROJECT_DIR$/static/img/stackoverflow-g.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/stackoverflow.png" afterPath="$PROJECT_DIR$/static/img/stackoverflow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mooccert/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cv/cv_page.html" afterPath="$PROJECT_DIR$/cv/cv_page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/main.css" afterPath="$PROJECT_DIR$/static/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cv/resume_BagratAznauryan.css" afterPath="$PROJECT_DIR$/cv/resume_BagratAznauryan.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/social.css" afterPath="$PROJECT_DIR$/static/css/social.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/timeline.css" afterPath="$PROJECT_DIR$/static/css/timeline.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/timeline.js" afterPath="$PROJECT_DIR$/static/js/timeline.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bagrat.aznauryan.org.iws" />
@@ -38,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.75">
+            <state vertical-scroll-proportion="0.31484258">
               <caret line="29" column="46" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="46" />
               <folding />
             </state>
@@ -68,11 +55,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="timeline.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mooccert/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="timeline.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/timeline.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37047756">
-              <caret line="291" column="21" selection-start-line="291" selection-start-column="21" selection-end-line="291" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="291" column="22" selection-start-line="291" selection-start-column="22" selection-end-line="291" selection-end-column="22" />
               <folding>
                 <element signature="e#10#183#0" expanded="false" />
                 <element signature="e#382#759#0" expanded="false" />
@@ -128,9 +125,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Html5" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="Html5" />
       </list>
     </option>
   </component>
@@ -151,6 +148,8 @@
         <option value="$PROJECT_DIR$/static/css/main.css" />
         <option value="$PROJECT_DIR$/static/css/timeline.css" />
         <option value="$PROJECT_DIR$/static/js/timeline.js" />
+        <option value="$PROJECT_DIR$/cv/cv_page.html" />
+        <option value="$PROJECT_DIR$/mooccert/index.html" />
       </list>
     </option>
   </component>
@@ -268,7 +267,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cv" />
+              <option name="myItemId" value="mooccert" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -478,14 +477,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cv/cv_page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33278957">
-          <caret line="25" column="31317" selection-start-line="25" selection-start-column="31297" selection-end-line="25" selection-end-column="31317" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/ga.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -493,14 +484,6 @@
           <folding>
             <marker date="1436289878000" expanded="true" signature="326:388" placeholder="//..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75">
-          <caret line="29" column="46" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -528,6 +511,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/timeline.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="291" column="22" selection-start-line="291" selection-start-column="22" selection-end-line="291" selection-end-column="22" />
+          <folding>
+            <element signature="e#10#183#0" expanded="false" />
+            <element signature="e#382#759#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cv/cv_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.375">
+          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/timeline.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -536,14 +538,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/timeline.js">
+    <entry file="file://$PROJECT_DIR$/mooccert/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37047756">
-          <caret line="291" column="21" selection-start-line="291" selection-start-column="21" selection-end-line="291" selection-end-column="21" />
-          <folding>
-            <element signature="e#10#183#0" expanded="false" />
-            <element signature="e#382#759#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31484258">
+          <caret line="29" column="46" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
