@@ -51,7 +51,7 @@
 
 .timelineEntryName {
     font-size: 9px;
-    color: #999;
+    color: #ddd;
     position: absolute;
     left: 2px;
     top: 1px;
@@ -61,4 +61,19 @@
     position: absolute;
     bottom: 3px;
     font-size: 10px;
+}
+
+.timelineEntryToolTip {
+    position: absolute;
+    height: auto;
+    width: auto;
+    max-width: 300px;
+    padding: 5px;
+    border: 1px dotted #2f3236;
+    border-radius: 3px;
+    background: #90b5ec;
+    word-wrap: break-word;
+    visibility: hidden;
+    font-size: 10px;
+    opacity: 0.95;
 }

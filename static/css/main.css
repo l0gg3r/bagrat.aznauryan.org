@@ -33,9 +33,9 @@ body {
     top: 2%;
 }
 
-#profilesBox a {
+a {
     text-decoration: none;
-    color: #36AEFF;
+    color: #ddd;
 }
 
 #profilesBox a:hover {

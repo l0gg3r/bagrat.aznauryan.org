@@ -1,5 +1,5 @@
 
-this.months = {
+months = {
     "jan": 1,
     "feb": 2,
     "mar": 3,
@@ -123,12 +123,76 @@ var Scale = function(parent, start, end, height) {
     }
 };
 
+var ToolTip = function (parent, text, x) {
+    this.parent = parent;
+    this.text = text;
+    this.x = x;
+
+    var div = document.createElement('div');
+    div.className = 'timelineEntryToolTip';
+    div.style.left = x;
+    div.innerHTML = this.text;
+    this.div = div;
+
+    this.draw = function() {
+        document.body.appendChild(this.div);
+    }
+};
+
+var ScenarioEntry = function (parent, scale, height, name, description, longDescription, start, end) {
+    var positionParams = scale.getPeriodInTime(start, end);
+
+    var div = document.createElement('div');
+    div.className = 'timelineEntry';
+    div.style.height = height;
+    div.style.width = positionParams.width;
+    div.style.left = positionParams.x;
+
+    var contentDiv = document.createElement('div');
+    var nameDiv = document.createElement('div');
+    var descriptionDiv = document.createElement('div');
+
+    nameDiv.innerHTML = name;
+    nameDiv.className = 'timelineEntryName';
+
+    descriptionDiv.innerHTML = description;
+    descriptionDiv.className = 'timelineEntryDescription';
+    descriptionDiv.style.right = positionParams.width / 40;
+
+    this.tip = new ToolTip(parent.div, longDescription, positionParams.x);
+    this.tip.draw();
+
+    contentDiv.appendChild(nameDiv);
+    contentDiv.appendChild(descriptionDiv);
+    div.appendChild(contentDiv);
+
+    var self = this;
+    this.cbMouseover = function(value) {
+        self.tip.div.style.visibility = 'visible';
+    };
+
+    this.cbMouseout = function(value) {
+        self.tip.div.style.visibility = 'hidden';
+    };
+
+    this.cbMousemove = function(e) {
+        self.tip.div.style.top = e.clientY - 20;
+        self.tip.div.style.left = e.clientX + 20;
+    };
+
+    div.onmouseover = this.cbMouseover;
+    div.onmouseout = this.cbMouseout;
+    div.onmousemove = this.cbMousemove;
+
+    this.div = div
+};
+
 var Scenario = function(parent, scale, width, height) {
     this.parent = parent;
     this.scale = scale;
     this.width = width - 1;
     this.height = height;
-    this.entries = {};
+    this.entries = [];
 
     var div = document.createElement('div');
     div.style.height = height;
@@ -137,37 +201,15 @@ var Scenario = function(parent, scale, width, height) {
 
     this.draw = function() {
         this.parent.appendChild(this.div);
-        for (var k in this.entries) {
-            console.log(k);
-            this.div.appendChild(this.entries[k].div);
-        }
+        var self = this;
+        this.entries.forEach(function (entry) {
+            self.div.appendChild(entry.div);
+        });
     };
 
-    this.addEntry = function (name, description, start, end) {
-        var positionParams = this.scale.getPeriodInTime(start, end);
-
-        var div = document.createElement('div');
-        div.className = 'timelineEntry';
-        div.style.height = this.height;
-        div.style.width = positionParams.width;
-        div.style.left = positionParams.x;
-
-        var contentDiv = document.createElement('div');
-        var nameDiv = document.createElement('div');
-        var descriptionDiv = document.createElement('div');
-
-        nameDiv.innerHTML = name;
-        nameDiv.className = 'timelineEntryName';
-
-        descriptionDiv.innerHTML = description;
-        descriptionDiv.className = 'timelineEntryDescription';
-        descriptionDiv.style.right = positionParams.width / 40;
-
-        contentDiv.appendChild(nameDiv);
-        contentDiv.appendChild(descriptionDiv);
-        div.appendChild(contentDiv);
-
-        this.entries[name] = {start: start, end: end, div: div};
+    this.addEntry = function (name, url, description, longDescription, start, end) {
+        name = '<a href="' + url + '" target="_blank">' + name + "</a>";
+        this.entries.push(new ScenarioEntry(this, this.scale, this.height, name, description, longDescription, start, end));
     }
 };
 
@@ -196,11 +238,11 @@ var Timeline = function(height) {
 
         var self = this;
         this.exp.forEach(function (entry) {
-            self.experience.addEntry(entry.name, entry.description, entry.start, entry.end);
+            self.experience.addEntry(entry.name, entry.url, entry.description, entry.longDescription, entry.start, entry.end);
         });
 
         this.edu.forEach(function (entry) {
-            self.education.addEntry(entry.name, entry.description, entry.start, entry.end);
+            self.education.addEntry(entry.name, entry.url, entry.description, entry.longDescription, entry.start, entry.end);
         });
 
         this.experience.draw();
@@ -230,13 +272,55 @@ var Timeline = function(height) {
 
 var timeline = new Timeline(90);
 
-timeline.addEducation({name: 'Yerevan State University', description: 'B.S. in Physics', start: {month: 'sep', year: 2008}, end: {month: 'jun', year: 2012}});
-timeline.addEducation({name: 'American University of Armenia', description: 'M.S. in Computer Science', start: {month: 'sep', year: 2012}, end: {month: 'jan', year: 2015}});
+timeline.addEducation({
+    name: 'Yerevan State University',
+    url: 'http://ysu.am/faculties/en/Physics',
+    description: 'B.S. in Physics',
+    longDescription: 'Designed and implemented a device for automated investigation of the relation between the temperature and opacity of nematic liquid crystals.',
+    start: {month: 'sep', year: 2008},
+    end: {month: 'jun', year: 2012}
+});
+timeline.addEducation({
+    name: 'American University of Armenia',
+    url: 'http://cse.aua.am',
+    description: 'M.S. in Computer Science',
+    longDescription: 'Designed an extensible programmable motion control gimbal based on Raspberry Pi and Atmel AVR microcontroller.',
+    start: {month: 'sep', year: 2012},
+    end: {month: 'jan', year: 2015}
+});
 
-timeline.addExperience({name: 'Antel Design', description: 'C, AVR32', start: {month: 'feb', year: 2010}, end: {month: 'jul', year: 2012}});
-timeline.addExperience({name: 'be2', description: 'Java', start: {month: 'jul', year: 2012}, end: {month: 'mar', year: 2013}});
-timeline.addExperience({name: 'IUNetworks', description: 'Java, Python, bash', start: {month: 'mar', year: 2013}, end: {month: 'nov', year: 2014}});
-timeline.addExperience({name: 'Aarki', description: 'Python', start: {month: 'nov', year: 2014}, end: {month: getCurrentMonth(), year: 2015}});
+timeline.addExperience({
+    name: 'Antel Design',
+    url: 'http://www.knightsbridgeglobal.eu/index.php?option=com_content&view=article&id=3&Itemid=1&lang=en',
+    description: 'C, AVR32',
+    longDescription: 'Developed a command line interface via RS232 using C language on AVR32 architecture for a proprietary wireless transceiver. Also, wrote a GUI front-end application, by which increased user experience for configuring and monitoring the device. Additionally,integrated a third party Wi-Fi module on same platform to enable remote wireless configuration of the radio.',
+    start: {month: 'feb', year: 2010},
+    end: {month: 'jul', year: 2012}
+});
+timeline.addExperience({
+    name: 'be2',
+    url: 'http://www.be2.com',
+    description: 'Java',
+    longDescription: 'Developed RESTful Web Services for a matchmaking web application. Improved software development processes by setting up development environments and writing automation scripts, which increased development productivity by about 7% daily.',
+    start: {month: 'jul', year: 2012},
+    end: {month: 'mar', year: 2013}
+});
+timeline.addExperience({
+    name: 'IUNetworks',
+    url: 'http://iunetworks.am/#aboutUS',
+    description: 'Java, Python, bash',
+    longDescription: 'TBD',
+    start: {month: 'mar', year: 2013},
+    end: {month: 'nov', year: 2014}
+});
+timeline.addExperience({
+    name: 'Aarki',
+    url: 'http://www.aarki.com/about/',
+    description: 'Python',
+    longDescription: 'TBD',
+    start: {month: 'nov', year: 2014},
+    end: {month: getCurrentMonth(), year: 2015}
+});
 
 function getCurrentMonth() {
     var now = new Date();
