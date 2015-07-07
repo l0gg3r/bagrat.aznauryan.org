@@ -45,9 +45,6 @@
     font-size: x-small;
 }
 
-.timelineEntry:hover {
-    background-color: #90b5ec;
-}
 
 .timelineEntryName {
     font-size: 9px;
@@ -71,7 +68,7 @@
     padding: 5px;
     border: 1px dotted #2f3236;
     border-radius: 3px;
-    background: #90b5ec;
+    background: #d1e0aa;
     word-wrap: break-word;
     visibility: hidden;
     font-size: 10px;

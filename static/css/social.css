@@ -1,70 +1,88 @@
 
 .socialButton {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
     width: 48px;
     height: 48px;
     display: inline-block;
 }
 
 .twitterButton {
-    background: transparent url('../img/twitter-g.png') center top no-repeat;
+    background: transparent url('../img/twitter.png') center top no-repeat;
     background-size: contain;
 }
 
 .twitterButton:hover {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
     background-image: url("../img/twitter.png");
 }
 
 .linkedinButton {
-    background: transparent url('../img/linkedin-g.png') center top no-repeat;
+    background: transparent url('../img/linkedin.png') center top no-repeat;
     background-size: contain;
 }
 
 .linkedinButton:hover {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
     background-image: url("../img/linkedin.png");
 }
 
 
 .stackoverflowButton {
-    background: transparent url('../img/stackoverflow-g.png') center top no-repeat;
+    background: transparent url('../img/stackoverflow.png') center top no-repeat;
     background-size: contain;
 }
 
 .stackoverflowButton:hover {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
     background-image: url("../img/stackoverflow.png");
 }
 
 .githubButton {
-    background: transparent url('../img/github-g.png') center top no-repeat;
+    filter: contrast(0.2);
+    -webkit-filter: contrast(0.2);
+    background: transparent url('../img/github.png') center top no-repeat;
     background-size: contain;
 }
 
 .githubButton:hover {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
     background-image: url("../img/github.png");
 }
 
 .blogButton {
-    background: transparent url('../img/blog-g.png') center top no-repeat;
+    background: transparent url('../img/blog.png') center top no-repeat;
     background-size: contain;
 }
 
 .blogButton:hover {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
     background-image: url("../img/blog.png");
 }
 
 .cvButton {
-    background: transparent url('../img/cv-g.png') center top no-repeat;
+    background: transparent url('../img/cv.png') center top no-repeat;
     background-size: contain;
 }
 
 .cvButton:hover {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
     background-image: url("../img/cv.png");
 }
 
 .emailButton {
-    background: transparent url('../img/email-g.png') center top no-repeat;
+    background: transparent url('../img/email.png') center top no-repeat;
     background-size: contain;
 }
 
 .emailButton:hover {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
     background-image: url("../img/email.png");
 }
