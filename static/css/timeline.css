@@ -1,7 +1,7 @@
 
 .timelineMain {
     position: relative;
-    left: -15%;
+    left: -10%;
     top: 50px;
     border: 1px solid;
     -webkit-border-radius: 3px;
@@ -12,7 +12,7 @@
 .timelineScale {
     position: relative;
     color: #333333;
-    background-color: #dfdfdf;
+    background-color: #e7e7e7;
     border-top: 1px solid;
     border-bottom: 1px solid;
     display: inline-block;

@@ -59,3 +59,12 @@
 .cvButton:hover {
     background-image: url("../img/cv.png");
 }
+
+.emailButton {
+    background: transparent url('../img/email-g.png') center top no-repeat;
+    background-size: contain;
+}
+
+.emailButton:hover {
+    background-image: url("../img/email.png");
+}

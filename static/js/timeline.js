@@ -139,7 +139,7 @@ var ToolTip = function (parent, text, x) {
     }
 };
 
-var ScenarioEntry = function (parent, scale, height, name, description, longDescription, start, end) {
+var ScenarioEntry = function (parent, scale, height, name, description, longDescription, start, end, bgcolor) {
     var positionParams = scale.getPeriodInTime(start, end);
 
     var div = document.createElement('div');
@@ -147,6 +147,7 @@ var ScenarioEntry = function (parent, scale, height, name, description, longDesc
     div.style.height = height;
     div.style.width = positionParams.width;
     div.style.left = positionParams.x;
+    div.style.background = bgcolor;
 
     var contentDiv = document.createElement('div');
     var nameDiv = document.createElement('div');
@@ -157,7 +158,7 @@ var ScenarioEntry = function (parent, scale, height, name, description, longDesc
 
     descriptionDiv.innerHTML = description;
     descriptionDiv.className = 'timelineEntryDescription';
-    descriptionDiv.style.right = positionParams.width / 40;
+    descriptionDiv.style.right = 5;
 
     this.tip = new ToolTip(parent.div, longDescription, positionParams.x);
     this.tip.draw();
@@ -207,9 +208,9 @@ var Scenario = function(parent, scale, width, height) {
         });
     };
 
-    this.addEntry = function (name, url, description, longDescription, start, end) {
+    this.addEntry = function (name, url, description, longDescription, start, end, bgcolor) {
         name = '<a href="' + url + '" target="_blank">' + name + "</a>";
-        this.entries.push(new ScenarioEntry(this, this.scale, this.height, name, description, longDescription, start, end));
+        this.entries.push(new ScenarioEntry(this, this.scale, this.height, name, description, longDescription, start, end, bgcolor));
     }
 };
 
@@ -238,11 +239,11 @@ var Timeline = function(height) {
 
         var self = this;
         this.exp.forEach(function (entry) {
-            self.experience.addEntry(entry.name, entry.url, entry.description, entry.longDescription, entry.start, entry.end);
+            self.experience.addEntry(entry.name, entry.url, entry.description, entry.longDescription, entry.start, entry.end, entry.bgcolor);
         });
 
         this.edu.forEach(function (entry) {
-            self.education.addEntry(entry.name, entry.url, entry.description, entry.longDescription, entry.start, entry.end);
+            self.education.addEntry(entry.name, entry.url, entry.description, entry.longDescription, entry.start, entry.end, entry.bgcolor);
         });
 
         this.experience.draw();
@@ -278,7 +279,8 @@ timeline.addEducation({
     description: 'B.S. in Physics',
     longDescription: 'Designed and implemented a device for automated investigation of the relation between the temperature and opacity of nematic liquid crystals.',
     start: {month: 'sep', year: 2008},
-    end: {month: 'jun', year: 2012}
+    end: {month: 'jun', year: 2012},
+    bgcolor: '#d5d5d3'
 });
 timeline.addEducation({
     name: 'American University of Armenia',
@@ -286,7 +288,8 @@ timeline.addEducation({
     description: 'M.S. in Computer Science',
     longDescription: 'Designed an extensible programmable motion control gimbal based on Raspberry Pi and Atmel AVR microcontroller.',
     start: {month: 'sep', year: 2012},
-    end: {month: 'jan', year: 2015}
+    end: {month: 'jan', year: 2015},
+    bgcolor: '#ebc552'
 });
 
 timeline.addExperience({
@@ -295,7 +298,8 @@ timeline.addExperience({
     description: 'C, AVR32',
     longDescription: 'Developed a command line interface via RS232 using C language on AVR32 architecture for a proprietary wireless transceiver. Also, wrote a GUI front-end application, by which increased user experience for configuring and monitoring the device. Additionally,integrated a third party Wi-Fi module on same platform to enable remote wireless configuration of the radio. Wrote technical specifications and documentations for each piece of software.',
     start: {month: 'feb', year: 2010},
-    end: {month: 'jul', year: 2012}
+    end: {month: 'jul', year: 2012},
+    bgcolor: '#e2e2e0'
 });
 timeline.addExperience({
     name: 'be2',
@@ -303,7 +307,8 @@ timeline.addExperience({
     description: 'Java',
     longDescription: 'Developed RESTful Web Services for a matchmaking web application. Improved software development processes by setting up development environments and writing automation scripts, which increased development productivity by about 7% daily. Covered the developed code with unit tests and documentation which increased the readability of the code and decreased build fails. Worked as a part of a Scrum team, and investigated Scrum philosophy and principles.',
     start: {month: 'jul', year: 2012},
-    end: {month: 'mar', year: 2013}
+    end: {month: 'mar', year: 2013},
+    bgcolor: '#ebd052'
 });
 timeline.addExperience({
     name: 'IUNetworks',
@@ -311,7 +316,8 @@ timeline.addExperience({
     description: 'Java, Python, bash',
     longDescription: 'Designed 3-tier architecture for an e-commerce web service using Java. Developed scripts and organised infrastructure for automated builds, testing and code quality checks, which increased software quality and release processes and decreased development time. Developed base classes for unit testing which increased test coding by initialising and providing all necessary resources. Implemented logic split into service and data access layers.',
     start: {month: 'mar', year: 2013},
-    end: {month: 'nov', year: 2014}
+    end: {month: 'nov', year: 2014},
+    bgcolor: '#c6c6c5'
 });
 timeline.addExperience({
     name: 'Aarki',
@@ -319,7 +325,8 @@ timeline.addExperience({
     description: 'Python',
     longDescription: 'Design distributed web services and business models, organise infrastructure, including build, test and deployment automation, database design and architecture. Organised and automated data-center security setup scripts which significantly decreased intrusion chances by leaving a single entry point to each data-center. Developed wrappers/decorators for Python to hide repeating and routine implementation tasks, which increased development and debugging time by providing more intuitive and clean code.',
     start: {month: 'nov', year: 2014},
-    end: {month: getCurrentMonth(), year: 2015}
+    end: {month: getCurrentMonth(), year: 2015},
+    bgcolor: '#ffc926'
 });
 
 function getCurrentMonth() {

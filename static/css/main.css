@@ -16,6 +16,8 @@ body {
 }
 
 #nameBox {
+    position: relative;
+    left: -1%;
     font-size: 1.5em;
     font-weight: bold;
 }
@@ -35,7 +37,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #ddd;
+    color: black;
 }
 
 #profilesBox a:hover {
