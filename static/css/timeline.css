@@ -48,3 +48,17 @@
 .timelineEntry:hover {
     background-color: #90b5ec;
 }
+
+.timelineEntryName {
+    font-size: 9px;
+    color: #999;
+    position: absolute;
+    left: 2px;
+    top: 1px;
+}
+
+.timelineEntryDescription {
+    position: absolute;
+    bottom: 3px;
+    font-size: 10px;
+}

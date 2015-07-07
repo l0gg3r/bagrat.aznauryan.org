@@ -143,7 +143,7 @@ var Scenario = function(parent, scale, width, height) {
         }
     };
 
-    this.addEntry = function (name, start, end) {
+    this.addEntry = function (name, description, start, end) {
         var positionParams = this.scale.getPeriodInTime(start, end);
 
         var div = document.createElement('div');
@@ -151,7 +151,21 @@ var Scenario = function(parent, scale, width, height) {
         div.style.height = this.height;
         div.style.width = positionParams.width;
         div.style.left = positionParams.x;
-        div.innerHTML = name;
+
+        var contentDiv = document.createElement('div');
+        var nameDiv = document.createElement('div');
+        var descriptionDiv = document.createElement('div');
+
+        nameDiv.innerHTML = name;
+        nameDiv.className = 'timelineEntryName';
+
+        descriptionDiv.innerHTML = description;
+        descriptionDiv.className = 'timelineEntryDescription';
+        descriptionDiv.style.right = positionParams.width / 40;
+
+        contentDiv.appendChild(nameDiv);
+        contentDiv.appendChild(descriptionDiv);
+        div.appendChild(contentDiv);
 
         this.entries[name] = {start: start, end: end, div: div};
     }
@@ -182,11 +196,11 @@ var Timeline = function(height) {
 
         var self = this;
         this.exp.forEach(function (entry) {
-            self.experience.addEntry(entry.name, entry.start, entry.end);
+            self.experience.addEntry(entry.name, entry.description, entry.start, entry.end);
         });
 
         this.edu.forEach(function (entry) {
-            self.education.addEntry(entry.name, entry.start, entry.end);
+            self.education.addEntry(entry.name, entry.description, entry.start, entry.end);
         });
 
         this.experience.draw();
@@ -216,13 +230,13 @@ var Timeline = function(height) {
 
 var timeline = new Timeline(90);
 
-timeline.addEducation({name: 'Yerevan State University', start: {month: 'sep', year: 2008}, end: {month: 'jun', year: 2012}});
-timeline.addEducation({name: 'American University of Armenia', start: {month: 'sep', year: 2012}, end: {month: 'jan', year: 2015}});
+timeline.addEducation({name: 'Yerevan State University', description: 'B.S. in Physics', start: {month: 'sep', year: 2008}, end: {month: 'jun', year: 2012}});
+timeline.addEducation({name: 'American University of Armenia', description: 'M.S. in Computer Science', start: {month: 'sep', year: 2012}, end: {month: 'jan', year: 2015}});
 
-timeline.addExperience({name: 'Antel Design', start: {month: 'feb', year: 2010}, end: {month: 'jul', year: 2012}});
-timeline.addExperience({name: 'be2', start: {month: 'jul', year: 2012}, end: {month: 'mar', year: 2013}});
-timeline.addExperience({name: 'IUNetworks', start: {month: 'mar', year: 2013}, end: {month: 'nov', year: 2014}});
-timeline.addExperience({name: 'Aarki', start: {month: 'nov', year: 2014}, end: {month: getCurrentMonth(), year: 2015}});
+timeline.addExperience({name: 'Antel Design', description: 'C, AVR32', start: {month: 'feb', year: 2010}, end: {month: 'jul', year: 2012}});
+timeline.addExperience({name: 'be2', description: 'Java', start: {month: 'jul', year: 2012}, end: {month: 'mar', year: 2013}});
+timeline.addExperience({name: 'IUNetworks', description: 'Java, Python, bash', start: {month: 'mar', year: 2013}, end: {month: 'nov', year: 2014}});
+timeline.addExperience({name: 'Aarki', description: 'Python', start: {month: 'nov', year: 2014}, end: {month: getCurrentMonth(), year: 2015}});
 
 function getCurrentMonth() {
     var now = new Date();
