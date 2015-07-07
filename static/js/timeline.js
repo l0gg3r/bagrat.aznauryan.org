@@ -293,7 +293,7 @@ timeline.addExperience({
     name: 'Antel Design',
     url: 'http://www.knightsbridgeglobal.eu/index.php?option=com_content&view=article&id=3&Itemid=1&lang=en',
     description: 'C, AVR32',
-    longDescription: 'Developed a command line interface via RS232 using C language on AVR32 architecture for a proprietary wireless transceiver. Also, wrote a GUI front-end application, by which increased user experience for configuring and monitoring the device. Additionally,integrated a third party Wi-Fi module on same platform to enable remote wireless configuration of the radio.',
+    longDescription: 'Developed a command line interface via RS232 using C language on AVR32 architecture for a proprietary wireless transceiver. Also, wrote a GUI front-end application, by which increased user experience for configuring and monitoring the device. Additionally,integrated a third party Wi-Fi module on same platform to enable remote wireless configuration of the radio. Wrote technical specifications and documentations for each piece of software.',
     start: {month: 'feb', year: 2010},
     end: {month: 'jul', year: 2012}
 });
@@ -301,7 +301,7 @@ timeline.addExperience({
     name: 'be2',
     url: 'http://www.be2.com',
     description: 'Java',
-    longDescription: 'Developed RESTful Web Services for a matchmaking web application. Improved software development processes by setting up development environments and writing automation scripts, which increased development productivity by about 7% daily.',
+    longDescription: 'Developed RESTful Web Services for a matchmaking web application. Improved software development processes by setting up development environments and writing automation scripts, which increased development productivity by about 7% daily. Covered the developed code with unit tests and documentation which increased the readability of the code and decreased build fails. Worked as a part of a Scrum team, and investigated Scrum philosophy and principles.',
     start: {month: 'jul', year: 2012},
     end: {month: 'mar', year: 2013}
 });
@@ -309,7 +309,7 @@ timeline.addExperience({
     name: 'IUNetworks',
     url: 'http://iunetworks.am/#aboutUS',
     description: 'Java, Python, bash',
-    longDescription: 'TBD',
+    longDescription: 'Designed 3-tier architecture for an e-commerce web service using Java. Developed scripts and organised infrastructure for automated builds, testing and code quality checks, which increased software quality and release processes and decreased development time. Developed base classes for unit testing which increased test coding by initialising and providing all necessary resources. Implemented logic split into service and data access layers.',
     start: {month: 'mar', year: 2013},
     end: {month: 'nov', year: 2014}
 });
@@ -317,7 +317,7 @@ timeline.addExperience({
     name: 'Aarki',
     url: 'http://www.aarki.com/about/',
     description: 'Python',
-    longDescription: 'TBD',
+    longDescription: 'Design distributed web services and business models, organise infrastructure, including build, test and deployment automation, database design and architecture. Organised and automated data-center security setup scripts which significantly decreased intrusion chances by leaving a single entry point to each data-center. Developed wrappers/decorators for Python to hide repeating and routine implementation tasks, which increased development and debugging time by providing more intuitive and clean code.',
     start: {month: 'nov', year: 2014},
     end: {month: getCurrentMonth(), year: 2015}
 });
