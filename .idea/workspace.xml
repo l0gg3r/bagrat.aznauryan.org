@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a56da59b-1b85-4880-88e3-de46faf4ee75" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/timeline.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/timeline.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cv/cv.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cv/index.html" afterPath="$PROJECT_DIR$/cv/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cv/resume_BagratAznauryan.css" afterPath="$PROJECT_DIR$/cv/resume_BagratAznauryan.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/timeline.css" afterPath="$PROJECT_DIR$/static/css/timeline.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/timeline.js" afterPath="$PROJECT_DIR$/static/js/timeline.js" />
     </list>
     <ignored path="bagrat.aznauryan.org.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/static/css/timeline.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+              <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -52,11 +47,11 @@
       <file leaf-file-name="timeline.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/timeline.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6394231">
-              <caret line="98" column="28" selection-start-line="98" selection-start-column="28" selection-end-line="98" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.79262674">
+              <caret line="227" column="25" selection-start-line="227" selection-start-column="25" selection-end-line="227" selection-end-column="25" />
               <folding>
-                <element signature="e#65#290#0" expanded="false" />
-                <element signature="e#443#820#0" expanded="false" />
+                <element signature="e#15#188#0" expanded="false" />
+                <element signature="e#387#764#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -370,8 +365,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#65#290#0" expanded="false" />
-            <element signature="e#443#820#0" expanded="false" />
+            <element signature="e#15#188#0" expanded="false" />
+            <element signature="e#387#764#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -465,18 +460,18 @@
     <entry file="file://$PROJECT_DIR$/static/css/timeline.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/timeline.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6394231">
-          <caret line="98" column="28" selection-start-line="98" selection-start-column="28" selection-end-line="98" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.79262674">
+          <caret line="227" column="25" selection-start-line="227" selection-start-column="25" selection-end-line="227" selection-end-column="25" />
           <folding>
-            <element signature="e#65#290#0" expanded="false" />
-            <element signature="e#443#820#0" expanded="false" />
+            <element signature="e#15#188#0" expanded="false" />
+            <element signature="e#387#764#0" expanded="false" />
           </folding>
         </state>
       </provider>

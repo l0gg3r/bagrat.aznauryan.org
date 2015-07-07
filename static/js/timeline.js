@@ -1,20 +1,20 @@
 
-var Year = function(parent, year, width, x) {
-    this.months = {
-        "jan": 1,
-        "feb": 2,
-        "mar": 3,
-        "apr": 4,
-        "may": 5,
-        "jun": 6,
-        "jul": 7,
-        "aug": 8,
-        "sep": 9,
-        "oct": 10,
-        "nov": 11,
-        "dec": 12
-    };
+this.months = {
+    "jan": 1,
+    "feb": 2,
+    "mar": 3,
+    "apr": 4,
+    "may": 5,
+    "jun": 6,
+    "jul": 7,
+    "aug": 8,
+    "sep": 9,
+    "oct": 10,
+    "nov": 11,
+    "dec": 12
+};
 
+var Year = function(parent, year, width, x) {
     this.parent = parent;
     this.year = year;
     this.width = width;
@@ -61,16 +61,16 @@ var Year = function(parent, year, width, x) {
 
     this.getMonthX = function (month) {
         var monthWidth = (this.width + this.parent.yearDelta) / 12;
-        var localPosition = monthWidth * (this.months[month] - 1);
+        var localPosition = monthWidth * (months[month] - 1);
 
         return parseInt(this.div.style.left) + localPosition + this.width / 2;
     };
 
     this.getPeriodWidth = function(startMonth, endMonth, endYear) {
         var monthWidth = (this.width + this.parent.yearDelta) / 12;
-        var months = (endYear - this.year) * 12 - this.months[startMonth] + this.months[endMonth];
+        var monthsCount = (endYear - this.year) * 12 - months[startMonth] + months[endMonth];
 
-        return months * monthWidth;
+        return monthsCount * monthWidth;
     };
 };
 
@@ -222,7 +222,18 @@ timeline.addEducation({name: 'American University of Armenia', start: {month: 's
 timeline.addExperience({name: 'Antel Design', start: {month: 'feb', year: 2010}, end: {month: 'jul', year: 2012}});
 timeline.addExperience({name: 'be2', start: {month: 'jul', year: 2012}, end: {month: 'mar', year: 2013}});
 timeline.addExperience({name: 'IUNetworks', start: {month: 'mar', year: 2013}, end: {month: 'nov', year: 2014}});
-timeline.addExperience({name: 'Aarki', start: {month: 'nov', year: 2014}, end: {month: 'dec', year: 2015}});
+timeline.addExperience({name: 'Aarki', start: {month: 'nov', year: 2014}, end: {month: getCurrentMonth(), year: 2015}});
+
+function getCurrentMonth() {
+    var now = new Date();
+    var thisMonth = now.getMonth() < 12 ? now.getMonth() + 1 : now.getMonth();
+
+    for (var k in months) {
+        if (months[k] == thisMonth) {
+            return k;
+        }
+    }
+}
 
 function drawTimeline() {
     timeline.draw();
