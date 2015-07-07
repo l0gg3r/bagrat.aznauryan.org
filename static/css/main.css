@@ -44,3 +44,51 @@ a {
     text-decoration: none;
     color: #78C9FF;
 }
+
+.certificateContainer {
+    position: relative;
+    height: auto;
+    width: auto;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.certificateName {
+    position: relative;
+    margin: 10px auto;
+    height: auto;
+    width: auto;
+    text-align: center;
+    display: block;
+    color: #777;
+}
+
+.certificateName:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.rootContainer {
+    position: relative;
+    margin: 15px;
+    text-align: center;;
+}
+
+.certificateGroup {
+    border: 1px dashed;
+    border-radius: 10px;
+    padding: 20px;
+    height: auto;
+    width: auto;
+    display: inline-block;
+}
+
+.certificateGroupName {
+    position: relative;
+    margin: 0 auto 20px;
+    font-weight: bold;
+    height: auto;
+    width: auto;
+    text-align: left;
+    display: block;
+}
